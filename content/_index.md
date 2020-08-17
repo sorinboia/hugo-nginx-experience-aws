@@ -1,3 +1,10 @@
+---
+title: "Nginx Experience"
+chapter: false
+weight: 1
+---
+
+
 ## Welcome to AWS NGINX Meetup – From Application code to Customers
 
 Delivering modern applications has upped the needs to provide agile application services free from infrastructure constrains, while ensuring applications run faster, secured and at scale. Choosing the right architecture for application services allows organizations to innovate faster and role new services on any infrastructure or cloud architecture. 
