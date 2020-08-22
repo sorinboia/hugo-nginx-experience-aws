@@ -1,12 +1,11 @@
 +++
-title = "Publish External API"
+title = "Import the OpenApi definition"
 date = 2020-07-08T14:37:59+03:00
 weight = 40
 +++
 
 Next we are going to publish the application APIs to the world.   
 There are two ways of creating this configuration, the first one is manual similar to the way we performed the configuration until this point and the second one is described bellow.  
-
 
 As part of their development cycle, the developers of the Arcadia application are generating an [OpenApi](https://swagger.io/docs/specification/about/) specification to describe their APIs.  
 We are going to use this API specification in order to publish the services to the world.

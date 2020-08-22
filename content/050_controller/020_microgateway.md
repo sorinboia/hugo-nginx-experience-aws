@@ -51,6 +51,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: microgateway
+  annotations: 
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "tcp"
 spec:
   selector:
     app: microgateway
@@ -60,8 +63,7 @@ spec:
       name: http
     - port: 443
       targetPort: 443
-      name: https
-  externalTrafficPolicy: Local
+      name: https  
   type: LoadBalancer
 EOF
 ```
@@ -82,3 +84,7 @@ export microhost=$(kubectl get svc microgateway | tr -s " " | cut -d' ' -f4 | gr
 {{< output >}}
 aa2ba08e2b4024a85ba93aa32d0bafac-603500592.eu-central-1.elb.amazonaws.com
 {{< /output >}}
+
+{{% notice warning %}}
+If the output is \<pending\sd> you will need to re run the above command until you get an A record.
+{{% /notice %}}   
