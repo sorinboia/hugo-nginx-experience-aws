@@ -1,6 +1,7 @@
-baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Nginx Experience"
+sectionPagesMenu = "main"
+relativeURLs = true
 
 theme = "learn"
 
@@ -9,6 +10,8 @@ home = [ "HTML", "RSS", "JSON"]
 
 [params]
 themeVariant = "green"
+author = "Sorin Boiangiu"
+description = "Nginx experience on AWS"
 
 [deployment]
 # By default, files are uploaded in an arbitrary order.
