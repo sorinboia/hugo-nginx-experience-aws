@@ -27,7 +27,7 @@ Click "Add New" on the "Components" column and fill the data as described bellow
 > Name: arcadia-main-component  
 > Click Next
 
-> Workload Group Name: arcadia-main-wl
+> Workload Group Name: arcadia-main-wl  
 > URI: http://arcadia-main  
 > Click Submit  
 
@@ -42,7 +42,7 @@ Click "Add New" on the "Components" column and fill the data as described bellow
 > Click Submit  
 
 5. Move the routes that start with "/api" in the "Unrouted" to the "Components" column under the "arcadia-app2-component".
-Move the remaining routes under "arcadia-main-component"
+Move the remaining routes under "arcadia-main-component" and click Submit
 
 ![](/images/050_050_2.png )
 

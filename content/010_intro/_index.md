@@ -7,7 +7,7 @@ pre = "<b>1. </b>"
 +++
 
 
-## Intro to the workshop
+Intro to the workshop
 
 This workshop will provide guidelines on how to deploy an application from scratch in Amazon Elastic Kubernetes Service environment while protecting and enhancing the application availability and usability with Nginx solutions.
 

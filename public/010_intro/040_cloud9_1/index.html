@@ -12,21 +12,21 @@
     <title>Cloud 9 :: Nginx Experience</title>
 
     
-    <link href="../../css/nucleus.css?1598184993" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1598184993" rel="stylesheet">
-    <link href="../../css/hybrid.css?1598184993" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1598184993" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1598184993" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1598184993" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1598184993" rel="stylesheet">
-    <link href="../../css/theme.css?1598184993" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1598184993" rel="stylesheet">
+    <link href="../../css/nucleus.css?1598952415" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1598952415" rel="stylesheet">
+    <link href="../../css/hybrid.css?1598952415" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1598952415" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1598952415" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1598952415" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1598952415" rel="stylesheet">
+    <link href="../../css/theme.css?1598952415" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1598952415" rel="stylesheet">
     
-    <link href="../../css/theme-green.css?1598184993" rel="stylesheet">
+    <link href="../../css/theme-green.css?1598952415" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1598184993"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1598952415"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1598184993"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1598184993"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1598952415"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1598952415"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1598184993"></script>
+<script type="text/javascript" src="../../js/search.js?1598952415"></script>
 
     
   </div>
@@ -96,6 +96,27 @@
           
           
         
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro/005_workshop_path/" title="AWS Workshop environment" class="dd-item ">
+        <a href="../../010_intro/005_workshop_path/">
+        AWS Workshop environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
           
             
             
@@ -938,8 +959,7 @@
 
     
     <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
-
+      
     </section>
   </div>
 </nav>
@@ -1024,30 +1044,6 @@ This will open a cloud-based integrated development environment (IDE) that lets 
 <br>
   </p>
 <ol start="2">
-<li>Disable temporary credentials:</li>
-</ol>
-<ul>
-<li>In the Cloud9 IDE click the gear icon (in top right corner), or click to open a new tab and choose &ldquo;Open Preferences&rdquo;</li>
-<li>Select <strong>AWS SETTINGS</strong></li>
-<li>Turn off <strong>AWS managed temporary credentials</strong></li>
-<li>Close the Preferences tab</li>
-</ul>
-<p>  </p>
-<p><img src="../../images/c9disableiam.png" alt="c9disableiam"></p>
-<p>  </p>
-<ol start="3">
-<li>To ensure temporary credentials aren&rsquo;t already in place we will also remove any existing credentials file:</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rm -vf <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/.aws/credentials
-</code></pre></div><p>  </p>
-<ol start="4">
-<li>Validate the IAM role:</li>
-</ol>
-<p>Use the <a href="https://docs.aws.amazon.com/cli/latest/reference/sts/get-caller-identity.html">GetCallerIdentity</a> CLI command to validate that the Cloud9 IDE is using the correct IAM role.</p>
-<pre><code>aws sts get-caller-identity --query Arn | grep eksworkshop-admin -q &amp;&amp; echo &quot;IAM role valid&quot; || echo &quot;IAM role NOT valid&quot;
-</code></pre><p>If the IAM role is not valid, <!-- raw HTML omitted --><strong>DO NOT PROCEED</strong><!-- raw HTML omitted -->. Go back and confirm the steps on this page.</p>
-<p>  </p>
-<ol start="5">
 <li>Run the following command to install all the software tools required to run the workshop:</li>
 </ol>
 <pre><code>labs/eks/install.sh
@@ -1061,7 +1057,26 @@ aws-iam-authenticator in path
 terraform in path
 </output></pre></p>
 <p>  </p>
-<ol start="6">
+<ol start="3">
+<li>Disable temporary credentials:</li>
+</ol>
+<ul>
+<li>In the Cloud9 IDE click the gear icon (in top right corner), or click to open a new tab and choose &ldquo;Open Preferences&rdquo;</li>
+<li>Select <strong>AWS SETTINGS</strong></li>
+<li>Turn off <strong>AWS managed temporary credentials</strong></li>
+<li>Close the Preferences tab</li>
+</ul>
+<p>  </p>
+<p><img src="../../images/c9disableiam.png" alt="c9disableiam"></p>
+<p>  </p>
+<ol start="4">
+<li>Validate the IAM role:</li>
+</ol>
+<p>Use the <a href="https://docs.aws.amazon.com/cli/latest/reference/sts/get-caller-identity.html">GetCallerIdentity</a> CLI command to validate that the Cloud9 IDE is using the correct IAM role.</p>
+<pre><code>aws sts get-caller-identity --query Arn | grep eksworkshop-admin -q &amp;&amp; echo &quot;IAM role valid&quot; || echo &quot;IAM role NOT valid&quot;
+</code></pre><p>If the IAM role is not valid, <!-- raw HTML omitted --><strong>DO NOT PROCEED</strong><!-- raw HTML omitted -->. Go back and confirm the steps on this page.</p>
+<p>  </p>
+<ol start="5">
 <li>Clone the Workshop Repo:</li>
 </ol>
 <pre><code>git clone https://github.com/sorinboia/nginx-experience-aws
@@ -1074,7 +1089,7 @@ cd nginx-experience-aws/
 </footer>
 
         
-        </div> 
+        </div>
         
 
       </div>
@@ -1082,8 +1097,8 @@ cd nginx-experience-aws/
     <div id="navigation">
         
         
+
         
-        
             
             
                 
@@ -1122,51 +1137,6 @@ cd nginx-experience-aws/
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1191,80 +1161,6 @@ cd nginx-experience-aws/
                     
                     
 
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1338,6 +1234,29 @@ cd nginx-experience-aws/
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1394,6 +1313,9 @@ cd nginx-experience-aws/
             
         
                     
+            
+        
+                    
                         
             
             
@@ -1406,9 +1328,6 @@ cd nginx-experience-aws/
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -1554,6 +1473,118 @@ cd nginx-experience-aws/
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -1671,7 +1702,7 @@ cd nginx-experience-aws/
                     
             
         
-        
+
         
 
 
@@ -1681,29 +1712,31 @@ cd nginx-experience-aws/
 			<a class="nav nav-prev" href="../../010_intro/selfpaced/030_iam_role_1/" title="IAM Role"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../020_terraform/" title="Deploy NGINX infrastructure using Terraform" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+      
+        <a class="nav nav-next" href="../../020_terraform/" title="Deploy NGINX infrastructure using Terraform" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+      
 		
 	
     </div>
 
     </section>
-    
+
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1598184993"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1598184993"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1598184993"></script>
-    <script src="../../js/jquery.sticky.js?1598184993"></script>
-    <script src="../../js/featherlight.min.js?1598184993"></script>
-    <script src="../../js/highlight.pack.js?1598184993"></script>
+    <script src="../../js/clipboard.min.js?1598952415"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1598952415"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1598952415"></script>
+    <script src="../../js/jquery.sticky.js?1598952415"></script>
+    <script src="../../js/featherlight.min.js?1598952415"></script>
+    <script src="../../js/highlight.pack.js?1598952415"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1598184993"></script>
-    <script src="../../js/learn.js?1598184993"></script>
-    <script src="../../js/hugo-learn.js?1598184993"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1598952415"></script>
+    <script src="../../js/learn.js?1598952415"></script>
+    <script src="../../js/hugo-learn.js?1598952415"></script>
 
-    <link href="../../mermaid/mermaid.css?1598184993" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1598184993"></script>
+    <link href="../../mermaid/mermaid.css?1598952415" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1598952415"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

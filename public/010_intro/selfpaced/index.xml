@@ -18,7 +18,9 @@
       
       <guid>/010_intro/selfpaced/020_cloudformation_1/</guid>
       <description>Click the bellow button and deploy the template:  
-Click Next 3 times accepting all the defaults, but make sure the following is selected on the last screen:  Click Create stack.  Wait until the NGINX-EKS stack Status is CREATE_COMPLETE.</description>
+ Click Next and enter a unique &amp;ldquo;Stack name&amp;rdquo;
+  Click Next 2 times accepting all the defaults, but make sure the following is selected on the last screen:
+  Click Create stack.  Wait until the stack Status is CREATE_COMPLETE.</description>
     </item>
     
     <item>

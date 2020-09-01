@@ -38,36 +38,3 @@ kubectl get svc
  {{< /output >}}
 
 We are interested in "main" and "app2" and their DNS names are `arcadia-main` and `arcadia-app2`.
-
-4. Create the workloads:
-##### "N" -> "Services" -> "APIs" -> "Workload Groups" -> "Create a Workload Group"
-Create the configuration of each of the workloads:  
-
-> Name: arcadia-app2  
-> Click Save  
-
-Add a Workload:
-> First input: arcadia-app2  
-> Port: 80  
-
-Repeat the steps above for `arcadia-main`. 
-   
-5. Add a Published API:  
-
-Return to "N" -> "Services"-> "APIs" -> "API Definitions" -> "Arcadia API" -> "Pen" Icon -> "Add a Published API":
-
-> Published API Name: arcadia-pub-api  
-> Environment: prod  
-> Application: arcadia-api  
-> Gateways: api.arcadia.aws.cloud  
-
-Save  
-
-6. Click on 'Add a route':  
-
-> All URLs that start with /api - assign the "arcadia-app2" workload  
-> All URLs that start with /trading - assign the "arcadia-main" workload
-
-After adding each route click Save.  
-
-When done click "Publish".  

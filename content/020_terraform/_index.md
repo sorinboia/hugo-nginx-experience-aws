@@ -7,6 +7,6 @@ chapter = true
 pre = "<b>2. </b>"
 +++
 
-## Deploy NGINX infrastructure using Terraform
+Deploy NGINX infrastructure using Terraform
 
 We will start by using Terraform to deploy the initial infrastructure which includes the Amazon Elastic Kubernetes Service and the EC2 instance for the Nginx Controller.

@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>AWS Workshop environment</title>
+      <link>/010_intro/005_workshop_path/</link>
+      <pubDate>Wed, 08 Jul 2020 14:37:59 +0300</pubDate>
+      
+      <guid>/010_intro/005_workshop_path/</guid>
+      <description>There are two ways of doing the workshop, as part of an AWS event or on your own. Please click the relevant path.
+ AWS Workshop On your own  </description>
+    </item>
+    
+    <item>
       <title>Cloud 9</title>
       <link>/010_intro/040_cloud9_1/</link>
       <pubDate>Wed, 08 Jul 2020 14:37:59 +0300</pubDate>

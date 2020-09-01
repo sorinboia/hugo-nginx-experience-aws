@@ -12,21 +12,21 @@
     <title>Accessing the Nginx Controller :: Nginx Experience</title>
 
     
-    <link href="../../css/nucleus.css?1598184993" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1598184993" rel="stylesheet">
-    <link href="../../css/hybrid.css?1598184993" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1598184993" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1598184993" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1598184993" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1598184993" rel="stylesheet">
-    <link href="../../css/theme.css?1598184993" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1598184993" rel="stylesheet">
+    <link href="../../css/nucleus.css?1598952415" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1598952415" rel="stylesheet">
+    <link href="../../css/hybrid.css?1598952415" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1598952415" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1598952415" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1598952415" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1598952415" rel="stylesheet">
+    <link href="../../css/theme.css?1598952415" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1598952415" rel="stylesheet">
     
-    <link href="../../css/theme-green.css?1598184993" rel="stylesheet">
+    <link href="../../css/theme-green.css?1598952415" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1598184993"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1598952415"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1598184993"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1598184993"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1598952415"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1598952415"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1598184993"></script>
+<script type="text/javascript" src="../../js/search.js?1598952415"></script>
 
     
   </div>
@@ -96,6 +96,27 @@
           
           
         
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro/005_workshop_path/" title="AWS Workshop environment" class="dd-item ">
+        <a href="../../010_intro/005_workshop_path/">
+        AWS Workshop environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
           
             
             
@@ -938,8 +959,7 @@
 
     
     <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
-
+      
     </section>
   </div>
 </nav>
@@ -1017,17 +1037,14 @@
 <ol>
 <li>The Nginx Controller has already been deployed with the terraform declaration, we need to find the public IP address.</li>
 </ol>
-<pre><code>
+<pre><code>cd terraform
 export controller_ip=$(terraform state show &quot;aws_instance.controller&quot; | grep &quot;public_ip&quot; | grep -v &quot;associate_public_ip_address&quot; | cut -d'&quot;' -f2)
 curl -k -c cookie.txt -X POST --url &quot;https://$controller_ip/api/v1/platform/login&quot; --header 'Content-Type: application/json' --data '{&quot;credentials&quot;: {&quot;type&quot;: &quot;BASIC&quot;,&quot;username&quot;: &quot;nginx@f5.com&quot;,&quot;password&quot;: &quot;Admin2020&quot;}}'
 export controller_apikey=$(curl -k -sb cookie.txt -c cookie.txt https://$controller_ip/api/v1/platform/global | jq .currentStatus.agentSettings.apiKey | tr -d '&quot;')
 
 terraform state show &quot;aws_instance.controller&quot; | grep &quot;public_ip&quot; | grep -v &quot;associate_public_ip_address&quot; | cut -d'&quot;' -f2
+cd ..
 </code></pre><ol start="2">
-<li>Change the directory back to the original repo folder:</li>
-</ol>
-<pre><code>cd ..
-</code></pre><ol start="3">
 <li>Browse (using <code>HTTPS</code>) to the IP address of the Controller and verify you have access:</li>
 </ol>
 <pre><code>Username (email): nginx@f5.com
@@ -1039,7 +1056,7 @@ Password: Admin2020
 </footer>
 
         
-        </div> 
+        </div>
         
 
       </div>
@@ -1047,8 +1064,8 @@ Password: Admin2020
     <div id="navigation">
         
         
+
         
-        
             
             
                 
@@ -1078,51 +1095,6 @@ Password: Admin2020
                     
                     
                         
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
                     
                     
 
@@ -1155,76 +1127,6 @@ Password: Admin2020
                     
                     
 
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1306,99 +1208,6 @@ Password: Admin2020
                     
 
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -1410,7 +1219,6 @@ Password: Admin2020
             
                 
                     
-                    
                 
                 
 
@@ -1418,74 +1226,6 @@ Password: Admin2020
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1615,6 +1355,67 @@ Password: Admin2020
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1636,7 +1437,239 @@ Password: Admin2020
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
         
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+
         
 
 
@@ -1646,29 +1679,31 @@ Password: Admin2020
 			<a class="nav nav-prev" href="../../050_controller/" title="Nginx Controller"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../050_controller/020_microgateway/" title="Microgateway deployment" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+      
+        <a class="nav nav-next" href="../../050_controller/020_microgateway/" title="Microgateway deployment" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+      
 		
 	
     </div>
 
     </section>
-    
+
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1598184993"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1598184993"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1598184993"></script>
-    <script src="../../js/jquery.sticky.js?1598184993"></script>
-    <script src="../../js/featherlight.min.js?1598184993"></script>
-    <script src="../../js/highlight.pack.js?1598184993"></script>
+    <script src="../../js/clipboard.min.js?1598952415"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1598952415"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1598952415"></script>
+    <script src="../../js/jquery.sticky.js?1598952415"></script>
+    <script src="../../js/featherlight.min.js?1598952415"></script>
+    <script src="../../js/highlight.pack.js?1598952415"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1598184993"></script>
-    <script src="../../js/learn.js?1598184993"></script>
-    <script src="../../js/hugo-learn.js?1598184993"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1598952415"></script>
+    <script src="../../js/learn.js?1598952415"></script>
+    <script src="../../js/hugo-learn.js?1598952415"></script>
 
-    <link href="../../mermaid/mermaid.css?1598184993" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1598184993"></script>
+    <link href="../../mermaid/mermaid.css?1598952415" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1598952415"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

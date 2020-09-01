@@ -2,7 +2,7 @@
 title = "AWS Workshop Portal"
 date = 2020-07-08T14:37:59+03:00
 weight = 10
-Next = "/sorin"
+next_link = "/010_intro/040_cloud9_1/"
 +++
 
 This workshop creates an AWS account and a Cloud9 environment. You will need the **Participant Hash** provided upon entry, and your email address to track your unique session.

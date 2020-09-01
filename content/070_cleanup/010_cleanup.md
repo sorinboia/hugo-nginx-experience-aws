@@ -10,7 +10,7 @@ weight = 10
 kubectl delete --all svc --namespace=nginx-ingress
 kubectl delete --all svc --namespace=default
 cd terraform
-terraform destroy
+terraform destroy --auto-approve
 ```
 &nbsp;&nbsp;
   

@@ -12,21 +12,21 @@
     <title>Cloud Formation :: Nginx Experience</title>
 
     
-    <link href="../../../css/nucleus.css?1598184993" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1598184993" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1598184993" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1598184993" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1598184993" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1598184993" rel="stylesheet">
-    <link href="../../../css/atom-one-dark-reasonable.css?1598184993" rel="stylesheet">
-    <link href="../../../css/theme.css?1598184993" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1598184993" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1598952415" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1598952415" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1598952415" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1598952415" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1598952415" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1598952415" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1598952415" rel="stylesheet">
+    <link href="../../../css/theme.css?1598952415" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1598952415" rel="stylesheet">
     
-    <link href="../../../css/theme-green.css?1598184993" rel="stylesheet">
+    <link href="../../../css/theme-green.css?1598952415" rel="stylesheet">
     
     
 
-    <script src="../../../js/jquery-3.3.1.min.js?1598184993"></script>
+    <script src="../../../js/jquery-3.3.1.min.js?1598952415"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../../js/lunr.min.js?1598184993"></script>
-<script type="text/javascript" src="../../../js/auto-complete.js?1598184993"></script>
+<script type="text/javascript" src="../../../js/lunr.min.js?1598952415"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1598952415"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="../../../js/search.js?1598184993"></script>
+<script type="text/javascript" src="../../../js/search.js?1598952415"></script>
 
     
   </div>
@@ -96,6 +96,27 @@
           
           
         
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/010_intro/005_workshop_path/" title="AWS Workshop environment" class="dd-item ">
+        <a href="../../../010_intro/005_workshop_path/">
+        AWS Workshop environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
           
             
             
@@ -938,8 +959,7 @@
 
     
     <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
-
+      
     </section>
   </div>
 </nav>
@@ -1023,15 +1043,20 @@
 <ol>
 <li>Click the bellow button and deploy the template:</li>
 </ol>
-<p><a href="https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=NGINX-EKS&amp;templateURL=https://artl-cfn-templates.s3.eu-central-1.amazonaws.com/nginx.yaml"><img src="../../../images/cfls.svg" alt="Launch Stack"></a></p>
+<p><a href="https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://sorinnginx.s3.eu-central-1.amazonaws.com/nginx-cft.yaml"><img src="../../../images/cfls.svg" alt="Launch Stack"></a></p>
 <ol start="2">
-<li>Click <strong>Next</strong> 3 times accepting all the defaults, but make sure the following is selected on the last screen:</li>
+<li>
+<p>Click <strong>Next</strong> and enter a unique &ldquo;Stack name&rdquo;</p>
+</li>
+<li>
+<p>Click <strong>Next</strong> 2 times accepting all the defaults, but make sure the following is selected on the last screen:</p>
+</li>
 </ol>
 <p><img src="../../../images/iam-ack.png" alt="CFN IAM Ack"></p>
-<ol start="3">
+<ol start="4">
 <li>Click <strong>Create stack</strong>.</li>
 </ol>
-<p>Wait until the <strong>NGINX-EKS</strong> stack Status is <strong>CREATE_COMPLETE</strong>.</p>
+<p>Wait until the stack Status is <strong>CREATE_COMPLETE</strong>.</p>
 
 
 <footer class="footline">
@@ -1039,7 +1064,7 @@
 </footer>
 
         
-        </div> 
+        </div>
         
 
       </div>
@@ -1047,8 +1072,8 @@
     <div id="navigation">
         
         
+
         
-        
             
             
                 
@@ -1095,94 +1120,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1216,10 +1153,28 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1237,6 +1192,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -1247,35 +1205,6 @@
                     
             
         
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -1360,6 +1289,9 @@
             
         
                     
+            
+        
+                    
                         
             
             
@@ -1372,9 +1304,6 @@
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -1520,6 +1449,118 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -1637,7 +1678,7 @@
                     
             
         
-        
+
         
 
 
@@ -1647,29 +1688,31 @@
 			<a class="nav nav-prev" href="../../../010_intro/selfpaced/" title="...on your own"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../../010_intro/selfpaced/030_iam_role_1/" title="IAM Role" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+      
+        <a class="nav nav-next" href="../../../010_intro/selfpaced/030_iam_role_1/" title="IAM Role" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+      
 		
 	
     </div>
 
     </section>
-    
+
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1598184993"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1598184993"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1598184993"></script>
-    <script src="../../../js/jquery.sticky.js?1598184993"></script>
-    <script src="../../../js/featherlight.min.js?1598184993"></script>
-    <script src="../../../js/highlight.pack.js?1598184993"></script>
+    <script src="../../../js/clipboard.min.js?1598952415"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1598952415"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1598952415"></script>
+    <script src="../../../js/jquery.sticky.js?1598952415"></script>
+    <script src="../../../js/featherlight.min.js?1598952415"></script>
+    <script src="../../../js/highlight.pack.js?1598952415"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1598184993"></script>
-    <script src="../../../js/learn.js?1598184993"></script>
-    <script src="../../../js/hugo-learn.js?1598184993"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1598952415"></script>
+    <script src="../../../js/learn.js?1598952415"></script>
+    <script src="../../../js/hugo-learn.js?1598952415"></script>
 
-    <link href="../../../mermaid/mermaid.css?1598184993" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1598184993"></script>
+    <link href="../../../mermaid/mermaid.css?1598952415" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1598952415"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,12 +12,22 @@
     
     
     <item>
+      <title>AWS Workshop environment</title>
+      <link>/010_intro/005_workshop_path/</link>
+      <pubDate>Wed, 08 Jul 2020 14:37:59 +0300</pubDate>
+      
+      <guid>/010_intro/005_workshop_path/</guid>
+      <description>There are two ways of doing the workshop, as part of an AWS event or on your own. Please click the relevant path.
+ AWS Workshop On your own  </description>
+    </item>
+    
+    <item>
       <title>Accessing the Nginx Controller</title>
       <link>/050_controller/010_accessing_controller/</link>
       <pubDate>Wed, 08 Jul 2020 14:37:59 +0300</pubDate>
       
       <guid>/050_controller/010_accessing_controller/</guid>
-      <description>The Nginx Controller has already been deployed with the terraform declaration, we need to find the public IP address.  export controller_ip=$(terraform state show &amp;quot;aws_instance.controller&amp;quot; | grep &amp;quot;public_ip&amp;quot; | grep -v &amp;quot;associate_public_ip_address&amp;quot; | cut -d&#39;&amp;quot;&#39; -f2)curl -k -c cookie.txt -X POST --url &amp;quot;https://$controller_ip/api/v1/platform/login&amp;quot; --header &#39;Content-Type: application/json&#39; --data &#39;{&amp;quot;credentials&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;BASIC&amp;quot;,&amp;quot;username&amp;quot;: &amp;quot;nginx@f5.com&amp;quot;,&amp;quot;password&amp;quot;: &amp;quot;Admin2020&amp;quot;}}&#39;export controller_apikey=$(curl -k -sb cookie.txt -c cookie.txt https://$controller_ip/api/v1/platform/global | jq .currentStatus.agentSettings.apiKey | tr -d &#39;&amp;quot;&#39;)terraform state show &amp;quot;aws_instance.</description>
+      <description>The Nginx Controller has already been deployed with the terraform declaration, we need to find the public IP address.  cd terraformexport controller_ip=$(terraform state show &amp;quot;aws_instance.controller&amp;quot; | grep &amp;quot;public_ip&amp;quot; | grep -v &amp;quot;associate_public_ip_address&amp;quot; | cut -d&#39;&amp;quot;&#39; -f2)curl -k -c cookie.txt -X POST --url &amp;quot;https://$controller_ip/api/v1/platform/login&amp;quot; --header &#39;Content-Type: application/json&#39; --data &#39;{&amp;quot;credentials&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;BASIC&amp;quot;,&amp;quot;username&amp;quot;: &amp;quot;nginx@f5.com&amp;quot;,&amp;quot;password&amp;quot;: &amp;quot;Admin2020&amp;quot;}}&#39;export controller_apikey=$(curl -k -sb cookie.txt -c cookie.txt https://$controller_ip/api/v1/platform/global | jq .currentStatus.agentSettings.apiKey | tr -d &#39;&amp;quot;&#39;)terraform state show &amp;quot;aws_instance.</description>
     </item>
     
     <item>
@@ -58,7 +68,7 @@ namespace/nginx-ingress createdserviceaccount/nginx-ingress createdclusterrole
       <pubDate>Wed, 08 Jul 2020 14:37:59 +0300</pubDate>
       
       <guid>/070_cleanup/010_cleanup/</guid>
-      <description> In order to delete the resources created during this workshop, run the commands below:  kubectl delete --all svc --namespace=nginx-ingresskubectl delete --all svc --namespace=defaultcd terraformterraform destroy Finally, delete the NGINX-EKS stack in the CloudFormation console.  Please note: This will also delete the Cloud9 IDE instance.
+      <description> In order to delete the resources created during this workshop, run the commands below:  kubectl delete --all svc --namespace=nginx-ingresskubectl delete --all svc --namespace=defaultcd terraformterraform destroy --auto-approve Finally, delete the NGINX-EKS stack in the CloudFormation console.  Please note: This will also delete the Cloud9 IDE instance.
 </description>
     </item>
     
@@ -99,7 +109,9 @@ Managed control plane Amazon EKS provides a scalable and highly-available contro
       
       <guid>/010_intro/selfpaced/020_cloudformation_1/</guid>
       <description>Click the bellow button and deploy the template:  
-Click Next 3 times accepting all the defaults, but make sure the following is selected on the last screen:  Click Create stack.  Wait until the NGINX-EKS stack Status is CREATE_COMPLETE.</description>
+ Click Next and enter a unique &amp;ldquo;Stack name&amp;rdquo;
+  Click Next 2 times accepting all the defaults, but make sure the following is selected on the last screen:
+  Click Create stack.  Wait until the stack Status is CREATE_COMPLETE.</description>
     </item>
     
     <item>
@@ -263,12 +275,13 @@ Click Next
       
       <guid>/050_controller/060_add_auth/</guid>
       <description>Our APIs are published and now we will want to add authentication based on API Keys
- Create an Identity Provider:  &amp;ldquo;N&amp;rdquo; -&amp;gt; &amp;ldquo;Services&amp;rdquo; -&amp;gt; &amp;ldquo;APIs&amp;rdquo; -&amp;gt; &amp;ldquo;Identity Provider&amp;rdquo; -&amp;gt; &amp;ldquo;Create an Identity Provider&amp;rdquo;  Name: api-protect
+ Create an Identity Provider:  &amp;ldquo;N&amp;rdquo; -&amp;gt; &amp;ldquo;Services&amp;rdquo; -&amp;gt; &amp;ldquo;Identity Provider&amp;rdquo; -&amp;gt; &amp;ldquo;Create an Identity Provider&amp;rdquo;  Name: api-protect
 Environment: prod
 Type: API Key
  Under &amp;ldquo;API Clients&amp;rdquo;
  Name: test-client
-Key: 1234567890 Click Submit
+Key: 1234567890
+Click Submit
  Go the the edit mode of APIs we have previously published  &amp;ldquo;N&amp;rdquo; -&amp;gt; &amp;ldquo;Services&amp;rdquo; -&amp;gt; &amp;ldquo;APIs&amp;rdquo; -&amp;gt; Click &amp;ldquo;arcadia-api&amp;rdquo; -&amp;gt; Click the edit icon Attach the new Identity Provider to the APIs   Click &amp;ldquo;Routing&amp;rdquo;</description>
     </item>
     

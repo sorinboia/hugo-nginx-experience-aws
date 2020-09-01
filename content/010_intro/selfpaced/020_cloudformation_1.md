@@ -6,15 +6,16 @@ weight = 20
 
 1. Click the bellow button and deploy the template:
 
-[![Launch Stack](/images/cfls.svg)](https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=NGINX-EKS&templateURL=https://artl-cfn-templates.s3.eu-central-1.amazonaws.com/nginx.yaml)
+[![Launch Stack](/images/cfls.svg)](https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://sorinnginx.s3.eu-central-1.amazonaws.com/nginx-cft.yaml)
 
+2. Click **Next** and enter a unique "Stack name"
   
-2. Click **Next** 3 times accepting all the defaults, but make sure the following is selected on the last screen:
+3. Click **Next** 2 times accepting all the defaults, but make sure the following is selected on the last screen:
 
 
 ![CFN IAM Ack](/images/iam-ack.png)
 
 
-3. Click **Create stack**.
+4. Click **Create stack**.
 
-Wait until the **NGINX-EKS** stack Status is **CREATE_COMPLETE**.
+Wait until the stack Status is **CREATE_COMPLETE**.
