@@ -9,14 +9,14 @@ Our APIs are published and now we will want to add authentication based on API K
 
 1. Create an Identity Provider:
 ##### "N" -> "Services" -> "Identity Provider" -> "Create an Identity Provider"
-> Name: api-protect  
-> Environment: prod  
-> Type: API Key  
+> Name: ```api-protect```  
+> Environment: **prod**  
+> Type: **API Key**  
 
 
 Under "API Clients"
-> Name: test-client  
-> Key: 1234567890  
+> Name: ```test-client```  
+> Key: ```1234567890```  
 > Click Submit  
 
 2. Go the the edit mode of APIs we have previously published
@@ -31,9 +31,9 @@ Under "API Clients"
 ![](/images/050_060_2.png )
 
 4. Click "Add Authentication" and fill in the fields
-> Identity Provider: api-protect  
-> Credential Location: Header  
-> Credentials Value: apikey  
+> Identity Provider: ```api-protect```  
+> Credential Location: **Header**  
+> Credentials Value: ```apikey```  
 > Click Done  
 > Click Submit  
 > Click Submit again on the "Edit Published API" page

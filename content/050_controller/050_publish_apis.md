@@ -13,32 +13,32 @@ We are now going to publish the previously imported OpenApi definition.
 
 2. Fill in the data as described bellow
 
-> Name: arcadia-published-api  
+> Name: ```arcadia-published-api```  
 > Click Next  
 
 > Environment: prod  
-> App: arcadia-api  
-> Gateways: api.arcadia.aws.cloud  
+> App: ```arcadia-api```  
+> Gateways: **api.arcadia.aws.cloud**  
 > Click Next  
 
 3. We will now add the components that represent the workload for the main app that traffic will be sent to.   
 Click "Add New" on the "Components" column and fill the data as described bellow
 
-> Name: arcadia-main-component  
+> Name: ```arcadia-main-component```  
 > Click Next
 
-> Workload Group Name: arcadia-main-wl  
-> URI: http://arcadia-main  
+> Workload Group Name: ```arcadia-main-wl```  
+> URI: ```http://arcadia-main```  
 > Click Submit  
 
 4. Add the second component that represents the workload for app2   
 Click "Add New" on the "Components" column and fill the data as described bellow
 
-> Name: arcadia-app2-component  
+> Name: ```arcadia-app2-component```  
 > Click Next
 
-> Workload Group Name: arcadia-app2-wl  
-> URI: http://arcadia-app2    
+> Workload Group Name: ```arcadia-app2-wl```  
+> URI: ```http://arcadia-app2```    
 > Click Submit  
 
 5. Move the routes that start with "/api" in the "Unrouted" to the "Components" column under the "arcadia-app2-component".

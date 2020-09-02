@@ -44,7 +44,7 @@ Click "Submit".
 > Name: ```api.arcadia.aws.cloud```  
 > Environment: ```prod```  
 > Instance Refs: Select All  
-> Hostname: https://<EXTERNAL-IP OF THE "microgateway" SERVICE>  
+> Hostname: ```https://<EXTERNAL-IP OF THE "microgateway" SERVICE>```  
 > Cert Reference: ```server-cert```  
 > Submit
 
