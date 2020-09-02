@@ -59,4 +59,4 @@ At the moment we still have two key features missing:
 kubectl apply -f files/5ingress/2arcadia.yaml
 ```
 
-10. Look at the Nginx dashboard, you can see that right now that two HTTP upstreams have 2 members but no health checks are being done.
+10. Look at the Nginx dashboard and click on "HTTP Upstreams", you can see that right now that two HTTP upstreams have 2 members but no health checks are being done.

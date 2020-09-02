@@ -78,8 +78,8 @@ namespace/nginx-ingress createdserviceaccount/nginx-ingress createdclusterrole
       <pubDate>Wed, 08 Jul 2020 14:37:59 +0300</pubDate>
       
       <guid>/020_terraform/010_terraform_apply_1/</guid>
-      <description> Go to the &amp;ldquo;terraform&amp;rdquo; directory where we can find the terraform plan.  cd terraform Run the following commands, terraform plan will show us what it is going to be deployed in AWS by Terraform:  terraform init terraform plan Now let&amp;rsquo;s deploy the environment  terraform apply --auto-approve It will take around 10 minutes for Terraform and AWS to finish the initial deployment.
-</description>
+      <description>Go to the &amp;ldquo;terraform&amp;rdquo; directory where we can find the terraform plan.  cd terraform Run the following commands, terraform plan will show us what it is going to be deployed in AWS by Terraform:  terraform init terraform plan Now let&amp;rsquo;s deploy the environment  terraform apply --auto-approve It will take around 10 minutes for Terraform and AWS to finish the initial deployment.
+Please continue to the next page to learn about Kubernetes and Amazon EKS basics.</description>
     </item>
     
     <item>
