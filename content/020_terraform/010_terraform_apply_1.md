@@ -23,5 +23,6 @@ terraform apply --auto-approve
 ```
 
 {{% notice info %}}
-It will take around 10 minutes for Terraform and AWS to finish the initial deployment. Please continue to the next slide to learn about Kubernetes and Amazon EKS basics.
+It will take around 10 minutes for Terraform and AWS to finish the initial deployment.  
+Please continue to the next page to learn about Kubernetes and Amazon EKS basics.
 {{% /notice %}}
