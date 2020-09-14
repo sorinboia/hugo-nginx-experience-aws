@@ -19,7 +19,7 @@ cd ..
 
 2. Browse (using `HTTPS`) to the IP address of the Controller and verify you have access:
 
-```
-Username (email): nginx@f5.com
+{{% notice %}}
+Username (email): nginx@f5.com  
 Password: Admin2020
-```
+{{% /notice %}}

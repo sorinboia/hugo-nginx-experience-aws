@@ -68,7 +68,9 @@ OpenTracing wants to form a common language around what a trace is and how to in
       
       <guid>/040_ingress/060_mtls_1/</guid>
       <description>Enabling MTLS on our Nginx Ingress Controller is quite simple, we are going to add two lines to the existing config.
- We are going to add the bellow directives to our Ingress configuration, This will enable MTLS while using the pre uploaded ca.pem certificate.  ssl_client_certificate /etc/ssl/mycerts/ca.pem; ssl_verify_client on;Apply the new configuration:
+ We are going to add the bellow directives to our Ingress configuration, This will enable MTLS while using the pre uploaded ca.pem certificate.  ssl_client_certificate /etc/ssl/mycerts/ca.pem;
+ssl_verify_client on;
+Apply the new configuration:
 cat &amp;lt;&amp;lt; EOF | kubectl apply -f -apiVersion: extensions/v1beta1kind: Ingressmetadata:name: arcadiaannotations:nginx.</description>
     </item>
     

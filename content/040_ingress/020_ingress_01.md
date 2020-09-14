@@ -42,10 +42,10 @@ At this stage the basic install is finished and all that's left is to check the 
 
 4. Login to the application using the following credentials:
 
-```
-Username: admin
+{{% notice %}}
+Username: admin  
 Password: iloveblue
-```
+{{% /notice %}}
 
 At the moment we still have two key features missing:
 - We are serving only http, not https. We want our site to be fully secured therefore all communications need to be encrypted
